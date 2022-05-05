@@ -61,15 +61,16 @@ const Form = () => {
     return (
         <form ref={formRef}>
             <input
+                className='form-control'
                 type="text"
                 name="name"
-                placeholder="¿Qué piensas hacer hoy?"
+                placeholder="What do you think to do today?"
                 defaultValue={item.name}
                 onChange={(event) => {
                     setState({ ...state, name: event.target.value })
                 }}  ></input>
-            {item.id && <button onClick={onEdit}>Actualizar</button>}
-            {!item.id && <button onClick={onAdd}>Crear</button>}
+            {item.id && <button className='btn btn-primary mt-3' onClick={onEdit}>Update Task</button>}
+            {!item.id && <button className='btn btn-primary mt-3' onClick={onAdd}>Create Task</button>}
         </form>
     );
 }
