@@ -4,7 +4,8 @@ import com.sofka.williamfranco.backend.Model.Todo;
 import com.sofka.williamfranco.backend.Service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class TodoController {
     @Autowired
     private TodoService todoService;

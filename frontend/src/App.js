@@ -3,11 +3,11 @@ import {List} from './components/List';
 import Form from './components/Form';
 
 function App() {
-  return <React.Fragment>
+  return <div className='container mt-5'>
     <h3>To-Do List</h3>
     <Form />
     <List />
-  </React.Fragment>
+  </div>
 }
 
 export default App;
